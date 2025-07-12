@@ -207,7 +207,7 @@ const Portfolio = () => {
                 <Github size={18} /> GitHub
               </a>
               <a
-                href="/AmardeepBolaganicvresume12345_compressed (1).pdf"
+                href="/public/AmardeepBolaganicvresume12345_compressed (1).pdf"
                 download
                 target="_blank"
                 rel="noopener noreferrer"
