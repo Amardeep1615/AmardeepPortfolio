@@ -82,7 +82,7 @@ const Portfolio = () => {
       live: '#' // replace with live demo URL if available
     },
     {
-      title: 'Django CRM System',
+      title: 'Django Customer Relationship Management System',
       subtitle: 'Django • Python • SQL',
       description:
         'Comprehensive CRM solution with role-based access, lead/contact management and workflow automation.',
@@ -114,23 +114,26 @@ const Portfolio = () => {
       live: '#'
     },
     {
-      title: 'Student Management System',
-      subtitle: 'Python • SQLite',
+      title: 'EduTech Platform',
+      subtitle: 'React.js • Tailwind CSS • Bootstrap • JavaScript (ES6+)',
       description:
-        'CLI-based Student Management System supporting add/edit/delete/view operations and SQL persistence.',
+        'Developed an interactive online learning platform offering categorized courses, video tutorials, and study materials. Focused on responsive UI, smooth navigation, and optimized performance across devices.',
       features: [
-        'CRUD operations with sqlite3 integration',
-        'Input validation and clear CLI menus',
-        'Designed for extensibility and reporting'
+        'Modular React components with React Router for seamless navigation',
+        'State management using React Hooks and Context API',
+        'Dynamic course filtering and category-based listings via mock APIs',
+        'Fully responsive layout designed with Tailwind CSS and Bootstrap',
+        'Deployed on Vercel with CI/CD and GitHub integration for version control'
       ],
-      tech: ['Python', 'SQLite', 'SQL'],
-      image: 'https://images.unsplash.com/photo-1529070538774-1843cb3265df?auto=format&fit=crop&w=1350&q=80',
+      tech: ['React.js', 'Tailwind CSS', 'Bootstrap', 'JavaScript', 'Vercel', 'GitHub'],
+      image: 'https://images.unsplash.com/photo-1584697964199-3b7c3a8e0f33?auto=format&fit=crop&w=1350&q=80',
       github: 'https://github.com/Amardeep1615',
-      live: '#'
+      live: 'https://project-a-tmk.vercel.app'
     },
+
     {
-      title: 'Bank Transaction Management',
-      subtitle: 'Python • File Handling • SQL (Optional)',
+      title: 'Bank Transaction ',
+      subtitle: 'Python• SQL (Optional)',
       description:
         'Console-based banking app handling deposits, withdrawals and transaction logs with input validation and error handling.',
       features: [
@@ -222,7 +225,7 @@ const Portfolio = () => {
 
       {/* HERO */}
       <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-blue-600/12 to-purple-600/12"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-blue-600/12 to-purple-600/12 "></div>
         <div className="relative z-10 text-center max-w-4xl mx-auto px-6">
           <div className="mb-8">
             <div className="w-32 h-32 mx-auto mb-6 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full flex items-center justify-center text-4xl font-bold">
@@ -270,12 +273,15 @@ const Portfolio = () => {
 
           <div className="grid md:grid-cols-2 gap-10 items-center">
             <div className="p-6 bg-slate-800/40 rounded-2xl">
-              <div className="w-full h-64 bg-gradient-to-br from-blue-500/8 to-purple-500/8 rounded-xl flex items-center justify-center overflow-hidden"> {/* Added overflow-hidden for rounded corners on image */}
-                <img
-                  src="https://media.licdn.com/dms/image/D4D03AQH9r85D96C5kQ/profile-displayphoto-shrink_800_800/0/1715423850383?e=1721260800&v=beta&t=4p79P5fVf52wM_52Xo5p32cTqXpWnO20Bw73L8d4vF8" // Replace with your actual image URL
-                  alt="Amardeep Bolagani Profile"
-                  className="w-full h-full object-cover object-center" // Ensures the image covers the area nicely
-                />
+              <div className="w-full h-64 bg-gradient-to-br from-blue-500/8 to-purple-500/8 rounded-xl flex items-center justify-center overflow-hidden">
+                <div className="w-64 h-auto overflow-hidden rounded-2xl shadow-lg mx-auto">
+                  <img
+                    src="Amardeep Image.jpg"
+                    alt="Amardeep Bolagani Profile"
+                    className="w-full h-auto object-cover object-center rounded-2xl"
+                  />
+                </div>
+
               </div>
               {githubStats && (
                 <div className="mt-6 grid grid-cols-3 gap-4 text-center">
