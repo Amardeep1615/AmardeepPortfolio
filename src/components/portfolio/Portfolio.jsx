@@ -11,6 +11,7 @@ import {
   User,
   ChevronDown,
   Menu,
+  FileText,
   X
 } from 'lucide-react';
 
@@ -19,6 +20,7 @@ const Portfolio = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [githubStats, setGithubStats] = useState(null);
+  const [showPDF, setShowPDF] = useState(false);
 
   useEffect(() => {
     // Fetch GitHub stats (replace username if needed)
@@ -63,6 +65,13 @@ const Portfolio = () => {
     setIsMenuOpen(false);
   };
 
+   const handleOpenPDF = () => {
+    setShowPDF(true);
+    window.open("AmardeepBolaganiReactjs.pdf", "_blank"); // opens in a new tab
+  };
+
+
+
   // Projects (filled with your project details)
   const projects = [
     {
@@ -79,7 +88,7 @@ const Portfolio = () => {
       tech: ['Django', 'Python', 'MySQL', 'Bootstrap', 'HTML', 'CSS'],
       image: 'https://images.unsplash.com/photo-1600891964599-f61ba0e24092?auto=format&fit=crop&w=1350&q=80',
       github: 'https://github.com/Amardeep1615', // replace with repo if available
-      live: '#' // replace with live demo URL if available
+    
     },
     {
       title: 'Django Customer Relationship Management System',
@@ -95,7 +104,7 @@ const Portfolio = () => {
       tech: ['Django', 'Python', 'MySQL', 'Bootstrap', 'Tailwind'],
       image: 'https://img.freepik.com/free-photo/young-economists_1098-15592.jpg?semt=ais_hybrid&w=740&q=80',
       github: 'https://github.com/Amardeep1615',
-      live: '#'
+    
     },
     {
       title: 'E-Commerce Web Application (React)',
@@ -111,7 +120,7 @@ const Portfolio = () => {
       tech: ['React', 'JavaScript', 'Tailwind CSS', 'HTML', 'CSS'],
       image: 'https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=1350&q=80',
       github: 'https://github.com/Amardeep1615',
-      live: '#'
+      
     },
     {
       title: 'EduTech Platform',
@@ -126,7 +135,7 @@ const Portfolio = () => {
         'Deployed on Vercel with CI/CD and GitHub integration for version control'
       ],
       tech: ['React.js', 'Tailwind CSS', 'Bootstrap', 'JavaScript', 'Vercel', 'GitHub'],
-      image: 'https://images.unsplash.com/photo-1584697964199-3b7c3a8e0f33?auto=format&fit=crop&w=1350&q=80',
+      image: 'pexels-julia-m-cameron-4145153.jpg',
       github: 'https://github.com/Amardeep1615',
       live: 'https://project-a-tmk.vercel.app'
     },
@@ -144,7 +153,7 @@ const Portfolio = () => {
       tech: ['Python', 'File I/O', 'SQL'],
       image: 'https://images.unsplash.com/photo-1554224154-22dec7ec8818?auto=format&fit=crop&w=1350&q=80',
       github: 'https://github.com/Amardeep1615',
-      live: '#'
+    
     },
     {
       title: 'Meal Finder',
@@ -159,7 +168,7 @@ const Portfolio = () => {
       tech: ['HTML', 'CSS', 'JavaScript'],
       image: 'https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=1350&q=80',
       github: 'https://github.com/Amardeep1615',
-      live: '#'
+      
     },
     {
       title: 'Tech Shop (Static)',
@@ -174,7 +183,7 @@ const Portfolio = () => {
       tech: ['HTML', 'CSS'],
       image: 'https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=1350&q=80',
       github: 'https://github.com/Amardeep1615',
-      live: '#'
+      
     }
   ];
 
@@ -246,13 +255,28 @@ const Portfolio = () => {
               <a href="https://github.com/Amardeep1615" target="_blank" rel="noreferrer" className="flex items-center gap-2 bg-slate-800/50 px-4 py-2 rounded-full">
                 <Github size={16} /> GitHub
               </a>
-              <a href="/resume.pdf" download className="flex items-center gap-2 bg-blue-600 px-4 py-2 rounded-full text-white">
-                Resume
-              </a>
+               {/* Resume Button */}
+          <button
+            onClick={handleOpenPDF}
+            className="flex items-center gap-2 bg-blue-600 px-4 py-2 rounded-full text-white"
+          >
+            <FileText size={16} /> Resume
+          </button>
             </div>
+             {/* PDF Viewer */}
+        {showPDF && (
+          <div className="w-full max-w-xl h-[500px] mx-auto border rounded-lg overflow-hidden shadow-lg mt-6">
+              <iframe 
+              src="AmardeepBolaganiReactjs.pdf"
+              className="w-full h-full "
+              title="Resume PDF"
+            ></iframe>
+           
+          </div>
+        )}
 
             <div>
-              <button onClick={() => scrollToSection('projects')} className="bg-gradient-to-r from-blue-500 to-purple-500 px-6 py-3 rounded-full font-semibold hover:scale-105 transition-transform">
+              <button onClick={() => scrollToSection('projects')} className="bg-gradient-to-r from-blue-500 to-purple-500 px-5 py-3 mt-4 rounded-full font-semibold hover:scale-105 transition-transform">
                 View Projects
               </button>
             </div>
@@ -397,9 +421,7 @@ const Portfolio = () => {
                     <a href={p.github} target="_blank" rel="noreferrer" className="text-xs px-3 py-1 rounded-full bg-gray-800 hover:bg-gray-700">
                       <Github size={12} className="inline-block mr-1" /> Code
                     </a>
-                    <a href={p.live} target="_blank" rel="noreferrer" className="text-xs px-3 py-1 rounded-full bg-blue-600/20 text-blue-300 hover:bg-blue-600/30">
-                      <ExternalLink size={12} className="inline-block mr-1" /> Live
-                    </a>
+                    
                   </div>
                 </div>
               </div>
@@ -480,7 +502,7 @@ const Portfolio = () => {
             <a href="mailto:bolagani.amardeep1627@gmail.com" className="bg-gradient-to-r from-blue-500 to-purple-500 px-6 py-3 rounded-full font-semibold">
               Send Email
             </a>
-            <a href="/resume.pdf" download className="bg-slate-800 border border-slate-600 px-6 py-3 rounded-full font-semibold">
+            <a href="/" download className="bg-slate-800 border border-slate-600 px-6 py-3 rounded-full font-semibold">
               Download Resume
             </a>
           </div>
