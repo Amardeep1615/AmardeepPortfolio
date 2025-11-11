@@ -502,7 +502,7 @@ const Portfolio = () => {
             <a href="mailto:bolagani.amardeep1627@gmail.com" className="bg-gradient-to-r from-blue-500 to-purple-500 px-6 py-3 rounded-full font-semibold">
               Send Email
             </a>
-            <a href="/" download className="bg-slate-800 border border-slate-600 px-6 py-3 rounded-full font-semibold">
+            <a href="AmardeepBolaganiReactjs.pdf" download className="bg-slate-800 border border-slate-600 px-6 py-3 rounded-full font-semibold">
               Download Resume
             </a>
           </div>
