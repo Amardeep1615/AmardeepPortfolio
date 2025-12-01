@@ -298,9 +298,9 @@ const Portfolio = () => {
           <div className="grid md:grid-cols-2 gap-10 items-center">
             <div className="p-6 bg-slate-800/40 rounded-2xl">
               <div className="w-full h-64 bg-gradient-to-br from-blue-500/8 to-purple-500/8 rounded-xl flex items-center justify-center overflow-hidden">
-                <div className="w-64 h-auto overflow-hidden rounded-2xl shadow-lg mx-auto">
+                <div className="w-50  overflow-hidden rounded-2xl shadow-lg mx-auto">
                   <img
-                    src="Amardeep Image.jpg"
+                    src="AmarPortfolio.jpg"
                     alt="Amardeep Bolagani Profile"
                     className="w-full h-auto object-cover object-center rounded-2xl"
                   />
