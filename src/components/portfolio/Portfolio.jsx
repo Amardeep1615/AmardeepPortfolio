@@ -14,6 +14,7 @@ import {
   FileText,
   X
 } from 'lucide-react';
+import u1 from "../../assets/Uniquecoolcare.png"
 
 const Portfolio = () => {
   const [activeSection, setActiveSection] = useState('home');
@@ -67,13 +68,40 @@ const Portfolio = () => {
 
    const handleOpenPDF = () => {
     setShowPDF(true);
-    window.open("AmardeepBolaganiReactjs.pdf", "_blank"); // opens in a new tab
+    window.open("Amardeep Reactjs-Python Resume11.pdf", "_blank"); // opens in a new tab
   };
 
 
 
   // Projects (filled with your project details)
   const projects = [
+    {
+  title: 'Home Appliance Services',
+  subtitle: 'ReactJS • TailwindCSS • SEO Optimized',
+  description:
+    'A responsive web application for booking and exploring home appliance repair services including AC, Washing Machine, and Refrigerator maintenance. Designed to generate service leads and improve local search visibility.',
+
+  features: [
+    'Responsive service platform built with React and TailwindCSS for seamless user experience across devices',
+    'SEO optimized pages targeting local keywords like AC repair, washing machine service, and refrigerator repair',
+    'Integrated call-to-action and service booking functionality for quick customer inquiries',
+    'Brand showcase section displaying supported appliance manufacturers and services'
+  ],
+
+  tech: [
+    'ReactJS',
+    'TailwindCSS',
+    'JavaScript',
+    'HTML5',
+    'CSS3',
+    'Vercel Deployment',
+    'Google Analytics'
+  ],
+
+  image: u1,
+
+  github: 'https://uniquecoolcare.com'
+},
     {
       title: 'Food Ordering Web Application',
       subtitle: 'Django • Python • MySQL',
@@ -267,7 +295,7 @@ const Portfolio = () => {
         {showPDF && (
           <div className="w-full max-w-xl h-[500px] mx-auto border rounded-lg overflow-hidden shadow-lg mt-6">
               <iframe 
-              src="AmardeepBolaganiReactjs.pdf"
+              src="Amardeep Reactjs-Python Resume11.pdf"
               className="w-full h-full "
               title="Resume PDF"
             ></iframe>
@@ -388,7 +416,7 @@ const Portfolio = () => {
             {projects.map((p, i) => (
               <div key={i} className="bg-slate-800/40 rounded-xl overflow-hidden shadow-md hover:shadow-lg transition-shadow">
                 <div className="h-44 overflow-hidden">
-                  <img src={p.image} alt={p.title} className="w-full h-full object-cover transform hover:scale-105 transition-transform" />
+                  <img src={p.image} alt={p.title} className="w-full h-full object-fit transform hover:scale-105 transition-transform" />
                 </div>
                 <div className="p-5">
                   <div className="flex justify-between items-start">
@@ -419,9 +447,13 @@ const Portfolio = () => {
 
                   <div className="mt-4 flex gap-3">
                     <a href={p.github} target="_blank" rel="noreferrer" className="text-xs px-3 py-1 rounded-full bg-gray-800 hover:bg-gray-700">
-                      <Github size={12} className="inline-block mr-1" /> Code
+                      <Github size={12} className="inline-block mr-1" /> Link
                     </a>
+                 
                     
+                  </div>
+                  <div>
+                   
                   </div>
                 </div>
               </div>
@@ -502,7 +534,7 @@ const Portfolio = () => {
             <a href="mailto:bolagani.amardeep1627@gmail.com" className="bg-gradient-to-r from-blue-500 to-purple-500 px-6 py-3 rounded-full font-semibold">
               Send Email
             </a>
-            <a href="AmardeepBolaganiReactjs.pdf" download className="bg-slate-800 border border-slate-600 px-6 py-3 rounded-full font-semibold">
+            <a href="Amardeep Reactjs-Python Resume11.pdf" download className="bg-slate-800 border border-slate-600 px-6 py-3 rounded-full font-semibold">
               Download Resume
             </a>
           </div>
